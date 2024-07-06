@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>سيرة ذاتية</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // إضافة تفاعل لتغيير لون الخلفية عند الضغط على القسم
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.addEventListener('click', function() {
+                    sections.forEach(sec => sec.style.backgroundColor = ''); // إعادة تعيين الألوان الأخرى
+                    this.style.backgroundColor = '#d1c4e9'; // تغيير لون الخلفية للقسم المحدد
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <div class="resume">
@@ -66,4 +78,3 @@
     </div>
 </body>
 </html>
-
